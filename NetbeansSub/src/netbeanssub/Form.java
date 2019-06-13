@@ -14,7 +14,29 @@ import java.util.List;
  * @author Hein
  */
 public class Form extends javax.swing.JFrame {
-
+ private int Q1max = 3;
+    private int Q2max = 3;
+    private int Q3max =3;
+    private String name = "";
+    private String length=  "";
+    private int Leng;
+    private String start= "";
+    private String tabelcombo= "";
+    private int Top =0;
+    private String  one= "";
+    private int Max = 0;
+    private int last=0;
+    private String str= "";
+    private int pc=0;
+    private boolean check =true;
+    
+       LinkedList<String> tabel = new java.util.LinkedList<>();
+       ArrayList<String> multi = new ArrayList<>();
+        LinkedList<String> Qlist1 = new java.util.LinkedList<>();
+         LinkedList<String> Qlist2 = new java.util.LinkedList<>();
+   LinkedList<String> Qlist3 = new java.util.LinkedList<>();
+    ArrayList<Integer> t3 = new ArrayList<>();
+     ArrayList<Integer> t2 = new ArrayList<>();
     /**
      * Creates new form Form
      */
