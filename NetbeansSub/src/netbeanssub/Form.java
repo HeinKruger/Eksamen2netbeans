@@ -42,6 +42,10 @@ public class Form extends javax.swing.JFrame {
      */
     public Form() {
         initComponents();
+        slide1.setValue(Q1max);
+        slide2.setValue(Q2max);
+        slide3.setValue(Q3max);
+
     }
 
     /**
@@ -256,11 +260,11 @@ public class Form extends javax.swing.JFrame {
                                 .addComponent(lbladd))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(btnstart)
-                                        .addComponent(btnclear)))
+                                        .addComponent(btnclear))
+                                    .addComponent(jLabel6))
                                 .addGap(23, 23, 23))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -338,7 +342,30 @@ public class Form extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclearActionPerformed
-        // TODO add your handling code here:
+        tabel.clear();
+        multi.clear();
+        Qlist1.clear();
+        Qlist2.clear();
+        Qlist3.clear();
+        t2.clear();
+        t3.clear();
+        Q1max =3;
+        Q2max =3;
+        Q3max =3;
+        slide1.setValue(Q1max);
+        slide2.setValue(Q2max);
+        slide3.setValue(Q3max);
+        Max =0;
+        last = 0;
+        pc=0;
+        Top=0;
+         check =true;
+         txt1.setText("");
+        txt2.setText("");
+        txtname.setText("");
+        txtlength.setText("");
+        txtstart.setText("");
+// TODO add your handling code here:
         
     }//GEN-LAST:event_btnclearActionPerformed
 
