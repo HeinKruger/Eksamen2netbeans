@@ -340,7 +340,82 @@ public class Form extends javax.swing.JFrame {
         Max =30;
         SortTabel();*/
     }//GEN-LAST:event_btnAddActionPerformed
+    
+    private void printThis()
+   {
+       int k =0;
+     String p1 ="";
+       if(!Qlist1.isEmpty())
+       {
+           
+          while(!Qlist1.isEmpty()) {
+              p1 = p1 + Qlist1.getFirst();
+              try{
+               Qlist1.removeFirst();}
+                catch(Exception e){};
+           k++;
+           }
+            txt2.append("\n"+pc+": "+p1 );
+           pc =pc+k;
+       }
+     else if(!Qlist2.isEmpty() && Qlist1.isEmpty())
+       { 
+         for(int i=0; i < t2.get(0);i++)
+         {
+            p1 = p1 + Qlist2.getFirst(); 
+         try{
+         Qlist2.removeFirst();
+         }
+        catch(Exception e){};
+         k++;
+         }
+           txt2.append("\n "+pc+" :"+p1);
+           
+           try{
+         t2.remove(0);  
+         }
+        catch(Exception e){};
+        pc=pc+k;
+        
+       }
+       else if(!Qlist3.isEmpty() && Qlist2.isEmpty())
+       {
+           if(t3.get(0)> Q3max)
+           {
+        for (int i =0; i< Q3max;i++)
+        {
+         p1 = p1 + Qlist3.getFirst(); 
+         Qlist3.removeFirst();
+         k++;
+        }
+        txt2.append("\n "+pc+" :"+p1);
+        t3.set(0, (t3.get(0) -Q3max));
+        Mmovetoback();
+         pc= pc+k;
+           }
+           else 
+           {
+           for(int i =0; i< t3.get(0);i++)
+           {
+           p1 = p1 + Qlist3.getFirst(); 
+         try{
+         Qlist3.removeFirst();
+         }
+        catch(Exception e){};
+         k++;
+        }
+        txt2.append("\n "+pc+" :"+p1);
+           pc= pc+k;
+            try{
+         t3.remove(0);  
+         }
+        catch(Exception e){}; 
+        
+           }
+       }
+   }
 
+    
     private void btnclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclearActionPerformed
         tabel.clear();
         multi.clear();
