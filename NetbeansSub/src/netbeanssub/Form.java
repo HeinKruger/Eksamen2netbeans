@@ -323,7 +323,40 @@ public class Form extends javax.swing.JFrame {
         // TODO add your handling code here:
 
     }//GEN-LAST:event_slide1MouseClicked
-
+    
+    private void Madd()
+    {
+        
+            
+                if(Leng < Q1max)
+                {
+                Q1Add(Q1max,name,Leng);
+             Leng =0;
+                     }
+                else
+                {
+                Q1Add(Q1max,name,Leng);
+                Leng = Leng -Q1max;
+                Q2Add(Q2max,name,Leng,Q1max+1);
+               
+                
+                if(Leng < Q2max)
+                {
+                    t2.add(Leng);
+             Leng =0;
+              
+                     }
+                else
+                {
+                     t2.add(Q2max);
+                Leng = Leng -Q2max;
+               Q3Add(Q3max,name,Leng,Q1max+Q2max+1);
+                t3.add(Leng);    
+                }
+                txt1.append("\n"+Arrays.toString(t3.toArray()));
+                }
+    }
+    
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
         name = txtname.getText();
@@ -443,7 +476,27 @@ public class Form extends javax.swing.JFrame {
 // TODO add your handling code here:
         
     }//GEN-LAST:event_btnclearActionPerformed
-
+    
+     private void Sliders()
+    {
+         Q3max = slide3.getValue();
+           Q2max = slide2.getValue();
+             Q1max = slide1.getValue();
+    if(Q2max > Q3max)
+    {
+    Q2max = Q3max;
+    }
+         if(Q1max > Q2max)
+            {
+            Q1max = Q2max;
+            }
+    
+    slide1.setValue(Q1max);
+    slide2.setValue(Q2max);
+    slide3.setValue(Q3max);
+    
+    }
+    
     private void btnstartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnstartActionPerformed
         // TODO add your handling code here:
         
